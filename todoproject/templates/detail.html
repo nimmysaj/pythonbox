@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="shadow card border-danger mb-3">
+  <div class="card-body">
+      <h3>{{task.name}}</h3>
+      <p><b>{{task.priority}}</b></p>
+      <p><b>{{task.date}}</b></p>
+      <a href="{% url 'delete' task.id %}" class="btn btn-danger">Done</a>
+      <a href="{% url 'cbvupdate' task.id %}" class="btn btn-success">Update</a>
+  </div>
+</div>
+{% endblock %}
